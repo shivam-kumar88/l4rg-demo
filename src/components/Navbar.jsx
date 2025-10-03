@@ -10,10 +10,10 @@ import {
   FaPinterest,
 } from "react-icons/fa";
 import { FaXTwitter, FaBagShopping } from "react-icons/fa6";
-import { GiShoppingBag } from "react-icons/gi";
 import { IoLocationSharp } from "react-icons/io5";
 import NavMenu from "@/components/NavMenu";
 import Searchcomp from "./Searchcomp";
+import SideMenu from "./SideMenu";
 
 const headerMenus = [
   {
@@ -82,6 +82,7 @@ const headerMenus = [
 
 const Navbar = () => {
   const [searchopen, SetSearchOpen] = useState(false);
+  const [sidemenu, setSidemenu] = useState(false)
 
   return (
     <>
@@ -124,11 +125,11 @@ const Navbar = () => {
 
       <nav className="flex items-center lg:justify-between w-full px-3 lg:px-[8%]  bg-white shadow-md">
         <div className="flex items-center ">
-          <CiMenuBurger size={40} color="#1c4b65" className="flex lg:hidden" />
+          <CiMenuBurger onClick={()=>{setSidemenu(!sidemenu)}} size={40} color="#1c4b65" className="flex lg:hidden" />
           <img
             src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/logo.png"
             alt="Logo"
-            className="w-[160px] lg:w-[270px] "
+            className="w-[160px] lg:w-[270px] ml-4 sm:ml-0"
           />
         </div>
 
@@ -167,6 +168,10 @@ const Navbar = () => {
         onClose={() => {
           SetSearchOpen(false);
         }}
+      />
+      <SideMenu
+        isVisible={sidemenu}
+        onClose={()=>{setSidemenu(false)}}
       />
     </>
   );

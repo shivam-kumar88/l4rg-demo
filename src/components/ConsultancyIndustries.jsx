@@ -47,7 +47,8 @@ const industries = [
 ];
 
 const ConsultancyIndustries = () => (
-  <div className="px-5  bg-white rounded-xl shadow lg:px-[8%] mt-[80vh] lg:mt-0 pb-10">
+  <div className="w-full lg:px-[8%] flex flex-col items-center justify-center mb-5">
+  <div className="px-5  bg-white mt-[80vh] lg:mt-0 pb-10 border-b-1 border-[#c9c8c8] ">
     <div>
       <div className="flex items-center ">
         <div className="h-[2px] w-12 bg-[#e94d65] mr-2"></div>
@@ -81,6 +82,13 @@ const ConsultancyIndustries = () => (
         </div>
       ))}
     </div>
+  </div>
+  <div className="w-full h-[80px] lg:h-[120px] flex items-center justify-center lg:pt-5">
+    <button className="bg-[#1b4962] text-white text-lg px-5 py-3 cursor-pointer  font-semibold flex items-center hover:shadow-xl hover:-mt-1 duration-300 transition-all ">
+      <a>{"View all Industries"}</a>
+    </button>
+  </div>
+  
   </div>
 );
 

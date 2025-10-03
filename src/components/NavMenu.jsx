@@ -21,9 +21,9 @@ const HeaderMenus = ({ headerMenus }) => {
 
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
-            <a className="text-[#000] font-semibold cursor-pointer">
+            <button className="text-[#000] font-semibold cursor-pointer">
               {item.name}
-            </a>
+            </button>
           </PopoverTrigger>
           <PopoverContent className="w-60 bg-white border-0 mt-5 z-20 p-2 shadow-[0_0_15px_5px_rgba(0,0,0,0.10)] shadow-4xl shadow- border-white outline-none rounded-sm">
             <div className="flex flex-col space-y-4">
