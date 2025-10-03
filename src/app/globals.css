@@ -130,6 +130,10 @@
   }
 }
 
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
 .upward-move {
   animation: moveUp 0.7s ease-in-out forwards;
 }
