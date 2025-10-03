@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
@@ -96,6 +97,15 @@ export default function InfiniteCarousel() {
               className="flex flex-col items-center justify-center min-w-1/3 md:min-w-[200px] h-[120px]  "
             >
               <img src={company.icon} alt={company.name} className=" h-16 mb-3 object-contain" />
+              {/* <Image
+                src={company.icon}
+                alt={company.name}
+                width={64}       
+                height={64}      
+                className="mb-3"
+                style={{ objectFit: 'contain' }}
+                priority         
+              /> */}
               {/* <span className="text-blue-900 text-lg font-semibold">{company.name}</span> */}
             </div>
           ))}

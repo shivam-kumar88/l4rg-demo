@@ -1,6 +1,7 @@
 import { FaMoneyBillTransfer } from "react-icons/fa6";
 import { FaRegCompass } from "react-icons/fa";
 import { LuTrophy } from "react-icons/lu";
+import Image from "next/image";
 
 
 const achivements = [
@@ -66,12 +67,18 @@ export default function RequestCallbackSection() {
         
         {/* Right image/graphic section */}
         <div className="md:flex-1 flex items-center justify-center relative overflow-hidden">
-          <img
+          {/* <img
             src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/img-callback.png" // Replace with real image, optimized & hosted in /public
             alt="Business growth arrow"
             className="w-auto h-full object-cover"
+          /> */}
+          <Image
+            src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/img-callback.png"
+            alt="Business growth arrow"
+            fill
+            style={{ objectFit: 'cover' }}
+            priority
           />
-          
         </div>
       </div>
     );

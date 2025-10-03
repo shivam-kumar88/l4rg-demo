@@ -3,6 +3,7 @@ import { IoHourglassOutline } from "react-icons/io5";
 import { AiOutlineLineChart } from "react-icons/ai";
 import AnimatedCircularBar from "./AnimatedCircularBar";
 import { HiOutlineUserGroup } from "react-icons/hi";
+import Image from "next/image";
 
 
 export default function ExperienceSection() {
@@ -12,10 +13,19 @@ export default function ExperienceSection() {
         {/* Left Side - Image */}
         <div className="lg:w-[50%] z-10">
           <div className="">
-            <img
+            {/* <img
               src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/img-experience.png" // replace with your image path
               alt="Our Team"
               className="h-[450px] lg:h-[110vh]  object-cover"
+            /> */}
+            <Image
+              src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/img-experience.png"
+              alt="Our Team"
+              width={1920}       
+              height={1170}      
+              className="h-[450px] lg:h-[110vh] object-cover"
+              style={{ objectFit: 'cover', height: '450px',  }}
+              priority           
             />
           </div>
         </div>

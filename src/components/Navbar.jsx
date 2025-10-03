@@ -14,6 +14,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import NavMenu from "@/components/NavMenu";
 import Searchcomp from "./Searchcomp";
 import SideMenu from "./SideMenu";
+import Image from "next/image";
 
 const headerMenus = [
   {
@@ -126,10 +127,19 @@ const Navbar = () => {
       <nav className="flex items-center lg:justify-between w-full px-3 lg:px-[8%]  bg-white shadow-md">
         <div className="flex items-center ">
           <CiMenuBurger onClick={()=>{setSidemenu(!sidemenu)}} size={40} color="#1c4b65" className="flex lg:hidden" />
-          <img
+          {/* <img
             src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/logo.png"
             alt="Logo"
             className="w-[160px] lg:w-[270px] ml-4 sm:ml-0"
+          /> */}
+          <Image
+            src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/logo.png"
+            alt="Logo"
+            width={160}
+            height={90} 
+            sizes="(min-width: 1024px) 270px, 160px"
+            style={{ width: '100%', height: 'auto' }}
+            priority
           />
         </div>
 

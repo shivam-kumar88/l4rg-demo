@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 
@@ -12,9 +13,15 @@ export default function ConsultancyCard({data}) {
         if (window.innerWidth <= 768) setShowDetail((prev) => !prev);
       }}
     >
-      <img
+      {/* <img
         src={data.image}
         alt="HSBC Recruiting"
+        className="absolute inset-0 w-full h-full object-cover"
+      /> */}
+      <Image
+        src={data.image}
+        alt="HSBC Recruiting"
+        layout="fill"
         className="absolute inset-0 w-full h-full object-cover"
       />
 

@@ -11,6 +11,7 @@ import {
   } from "react-icons/fa";
   import { IoLocationSharp } from "react-icons/io5";
   import { FaXTwitter, FaBagShopping } from "react-icons/fa6";
+import Image from "next/image";
   
 
 
@@ -152,11 +153,19 @@ export default function SideMenu({ isVisible, onClose }) {
         
 
         <div className="flex w-full justify-center items-center gap-2 px-8 py-0 ">
-          <img
+          {/* <img
             src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/logo.png"
             alt="Logo"
             className=" w-[200px] "
-          />
+          /> */}
+          <Image
+            src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/logo.png"
+            alt="Logo"
+            width={200}
+            height={0} 
+            style={{ height: 'auto' }}
+            priority
+        />
         </div>
 
         <nav className="flex flex-col gap-2 px-8 py-4">

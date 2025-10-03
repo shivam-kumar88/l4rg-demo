@@ -127,7 +127,7 @@ export default function Footer() {
           {/* <img src="/map-image.png" className="w-full mb-4" alt="World Map" /> */}
           <div className=" flex flex-col lg:flex-row gap-2">
             <div>
-              <img
+              <Image
                 src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/img-footer-map.png"
                 alt="Footer Map"
                 width={280}

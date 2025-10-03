@@ -15,6 +15,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import NavMenu from "@/components/NavMenu";
 import Searchcomp from "./Searchcomp";
 import SideMenu from "./SideMenu";
+import Image from "next/image";
 
 
 const headerMenus = [
@@ -107,10 +108,18 @@ export default function FloatingNavbar() {
       <div className="container mx-auto py-0 px-2 flex justify-between items-center">
       <div className="flex items-center ">
           <CiMenuBurger onClick={()=>{setSidemenu(!sidemenu)}} size={40} color="#1c4b65" className="flex lg:hidden" />
-          <img
+          {/* <img
             src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/logo.png"
             alt="Logo"
             className="w-[130px] lg:w-[150px] ml-4 sm:ml-0"
+          /> */}
+          <Image
+            src="https://avantage.bold-themes.com/business/wp-content/uploads/sites/2/2019/04/logo.png"
+            alt="Logo"
+            width={150}           
+            height={ 80}  
+            className="ml-4 sm:ml-0"
+            priority              
           />
         </div>
 

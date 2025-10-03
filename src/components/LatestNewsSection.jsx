@@ -1,5 +1,7 @@
 // components/LatestNewsSection.jsx
 
+import Image from "next/image";
+
 const newsData = [
     {
       type: "PROJECTS",
@@ -61,7 +63,17 @@ const newsData = [
                 {/* Content */}
                 <div className={`p-0 ${item.image ? "bg-black/60 flex flex-col justify-end h-96" : ""}`}>
                   {item.image && (
-                    <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover z-0" style={{ filter: "blur(0px) brightness(0.7)" }} />
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      style={{
+                        objectFit: 'cover',
+                        filter: 'blur(0px) brightness(0.7)'
+                      }}
+                      priority
+                    />
+                    // <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover z-0" style={{ filter: "blur(0px) brightness(0.7)" }} />
                   )}
                   {
                     item.image
